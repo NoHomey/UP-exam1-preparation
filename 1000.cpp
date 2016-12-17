@@ -20,10 +20,10 @@ int main() {
             if((array[i - 1] % 2) != 0) {
                 result = false;
                 break;
-            } else if((array[i - 1] % i) != 0) {
-                result = false;
-                break;
             }
+        } else if((array[i - 1] % i) != 0) {
+            result = false;
+            break;
         }
     }
     std::cout << (result ? "Yes" : "No") << std::endl;

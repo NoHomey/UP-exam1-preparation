@@ -35,6 +35,10 @@ int qadroncii_loop(int b1, int b2, int b3, int b4, int n) {
     return b4;
 }
 
+int quadronocci(int n, int a1, int a2, int a3, int a4) {
+    return n == 4 ? a4 : quadronocci(n - 1, a2, a3, a4, a1 + a2 + a3 + a4);
+}
+
 int main() {
     int a1 = input();
     int a2 = input();
@@ -43,6 +47,7 @@ int main() {
     int n = input();
     std::cout << qadroncii(a1, a2, a3, a4, n) << std::endl;
     std::cout << qadroncii_loop(a1, a2, a3, a4, n) << std::endl;
-
+    std::cout << quadronocci(n, a1, a2, a3, a4) << std::endl;
+    
     return 0;
 }
